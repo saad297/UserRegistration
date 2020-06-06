@@ -24,3 +24,14 @@ else
         echo "invalid"
 fi
 
+echo "Enter the Email Address : "
+read email
+
+emailpat="(^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*$)*@[a-zA-Z0-9]+([.][a-z]{2,3}){1,2}$"
+
+if [[ $email =~ $emailpat ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
