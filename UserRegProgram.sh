@@ -35,3 +35,15 @@ then
 else
         echo "invalid"
 fi
+
+echo "Enter the Mobile Number : "
+read number
+
+numpat="^[0-9]{2}+[/s\-]?[1-9]{1}[0-9]{9}$"
+
+if [[ $number =~ $numpat ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
